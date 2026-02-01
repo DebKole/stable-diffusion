@@ -11,7 +11,7 @@ class VAE_AttentionBlock(nn.Module):
         self.attention = SelfAttention(1, channels)
     
     def forward(self, x: torch.Tensor) ->torch.Tensor:
-        #x: (batch_size, features, height, width)
+        #x: (batch_size, Nfeatures, height, width)
         residue = x
         
         n, c, h, w = x.shape()
